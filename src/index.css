@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+/* Custom CSS Variables - Museum Dark Palette */
+:root {
+  --color-primary: #e7e5e4;    /* stone-200 - Off-white/Bone */
+  --color-background: #1c1917; /* stone-900 - Deep warm charcoal */
+  --color-accent: #D4AF37;     /* Antique Gold */
+  --color-border: #57534e;     /* stone-600 - Subtle lines */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  overflow: hidden;
+}
+
+/* Serif font utility class */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Hide scrollbars globally */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Archival filter for map images */
+.archival-filter {
+  filter: sepia(0.25) contrast(1.1) brightness(0.8);
+}
+
+/* Antique gold accent color utility */
+.text-antique-gold {
+  color: #D4AF37;
+}
+
+.bg-antique-gold {
+  background-color: #D4AF37;
+}
+
+.border-antique-gold {
+  border-color: #D4AF37;
+}
+
