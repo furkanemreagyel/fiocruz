@@ -25,57 +25,57 @@
 export const timelineData = [
   {
     year: 1904,
-    mapUrl: "/1904-10.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1904-10.jpg",
     points: []
   },
   {
     year: 1911,
-    mapUrl: "/1911-20.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1911-20.jpg",
     points: []
   },
   {
     year: 1921,
-    mapUrl: "/1921-30.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1921-30.jpg",
     points: []
   },
   {
     year: 1931,
-    mapUrl: "/1931-40.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1931-40.jpg",
     points: []
   },
   {
     year: 1941,
-    mapUrl: "/1941-50.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1941-50.jpg",
     points: []
   },
   {
     year: 1951,
-    mapUrl: "/1951-60.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1951-60.jpg",
     points: []
   },
   {
     year: 1961,
-    mapUrl: "/1961-70.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1961-70.jpg",
     points: []
   },
   {
     year: 1971,
-    mapUrl: "/1971-80.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1971-80.jpg",
     points: []
   },
   {
     year: 1981,
-    mapUrl: "/1981-90.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1981-90.jpg",
     points: []
   },
   {
     year: 1991,
-    mapUrl: "/1991-00.jpg",
+    mapUrl: import.meta.env.BASE_URL + "1991-00.jpg",
     points: []
   },
   {
     year: 2000,
-    mapUrl: "/2000-20.jpg",
+    mapUrl: import.meta.env.BASE_URL + "2000-20.jpg",
     points: []
   }
 ];
