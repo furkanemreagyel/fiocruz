@@ -11,16 +11,16 @@ import DetailView from './DetailView';
 export default function MapOverlay({ mapUrl, points, year }) {
   const [selectedPoint, setSelectedPoint] = useState(null);
 
-  // Snappy cross-fade for maps (0.6s)
+  // Fast cross-fade for maps (0.3s) - images are preloaded
   const mapVariants = {
     initial: { opacity: 0 },
     animate: { 
       opacity: 1, 
-      transition: { duration: 0.6, ease: 'easeInOut' } 
+      transition: { duration: 0.3, ease: 'easeOut' } 
     },
     exit: { 
       opacity: 0, 
-      transition: { duration: 0.6, ease: 'easeInOut' } 
+      transition: { duration: 0.2, ease: 'easeIn' } 
     },
   };
 

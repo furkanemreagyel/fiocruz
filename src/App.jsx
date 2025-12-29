@@ -1,8 +1,19 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Timeline from './components/Timeline';
 import MapOverlay from './components/MapOverlay';
 import { timelineData } from './data/timelineData';
+
+// Preload all map images for instant transitions
+const preloadImages = () => {
+  timelineData.forEach((era) => {
+    const img = new Image();
+    img.src = era.mapUrl;
+  });
+  // Also preload welcome image
+  const welcomeImg = new Image();
+  welcomeImg.src = import.meta.env.BASE_URL + 'welcome.jpg';
+};
 
 /**
  * App Component
@@ -14,6 +25,11 @@ import { timelineData } from './data/timelineData';
 function App() {
   // Welcome screen state
   const [showWelcome, setShowWelcome] = useState(true);
+
+  // Preload all images on mount
+  useEffect(() => {
+    preloadImages();
+  }, []);
 
   // Extract years from timeline data
   const years = useMemo(() => timelineData.map((era) => era.year), []);
@@ -45,7 +61,7 @@ function App() {
             transition={{ duration: 1, ease: 'easeInOut' }}
           >
             <img
-              src="/welcome.jpg"
+              src={import.meta.env.BASE_URL + 'welcome.jpg'}
               alt="Welcome"
               className="w-full h-full object-contain"
             />
